@@ -1,0 +1,6 @@
+{
+  "name": "Caisse Association",
+  "description": "Application Android et simulateur de trésorerie pour associations : encaissements, cotisations, relances et versements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
