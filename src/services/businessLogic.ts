@@ -18,7 +18,9 @@ export function formatMoney(amount: number, currency: string = 'Ar'): string {
   const formatted = new Intl.NumberFormat('fr-FR', {
     useGrouping: true,
     maximumFractionDigits: 0,
-  }).format(rounded);
+  })
+    .format(rounded)
+    .replace(/[\u202F\u00A0]/g, ' ');
   return `${formatted} ${currency}`;
 }
 

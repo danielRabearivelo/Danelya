@@ -182,7 +182,9 @@ export function UnitTestsRunner() {
       );
       const expected =
         'Bonjour Faly, vous devez 10 000 Ar pour Janv. 2026 (Union Sportive).';
-      const passed = message === expected;
+      const cleanMessage = message.replace(/[\u202F\u00A0]/g, ' ');
+      const cleanExpected = expected.replace(/[\u202F\u00A0]/g, ' ');
+      const passed = cleanMessage === cleanExpected;
 
       testList.push({
         name: 'Interpolation des variables de relance ({prenom}, {montant_du}, {mois_impayes}, {association})',
